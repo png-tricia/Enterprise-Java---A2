@@ -1,0 +1,14 @@
+table, tr, th, td {
+	font-size: 10px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+tr, th, td {
+	padding: 15px;
+}
+
+table {
+	background-color: white;
+	width: 100%;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Converse Warped Tour | Add Ticket</title>
+<link rel="stylesheet" th:href="@{css/main.css}">
+<link rel="stylesheet" th:href="@{css/add.css}">
+</head>
+<body>
+<!-- Converse Warped Tour 2024  -->
+<header>
+	<!-- Links -->
+	<nav>
+		<div class="center">
+			<img th:src="@{../img/png-cwt_logo.png}">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="">Event Info</a></li>
+				<li><a href="">Guest List</a></li>
+				<li><a class="active" href="/add">Buy Ticket</a></li>
+				<li><a href="/view">View Tickets</a></li>
+				<li><a href="/stats">View Statistics</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>	
+<hr>
+<!-- main should be the only thing changing across all html pages  -->
+<main>
+	<section></section>
+	<!-- Layer Two -->
+	<section>
+		<div class="center centercenter">
+			<form th:action="@{/add}" method="post" th:object="${ticket}">
+				<table>
+					<tr><td><br></td></tr>
+					<tr>
+						<th colspan="2">BUY TICKET</th>
+					</tr>
+					<tr><td><br></td></tr>
+					<tr>
+						<td>Name of Attendee:</td>
+						<td>Phone:</td>
+					</tr>
+					<tr>
+						<td><input type="text" placeholder="Full Name" name="name" th:field="*{name}"></td>
+						<td><input type="text" placeholder="### ### ####" name="phone" th:field="*{phone}"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td>Gender:</td>
+					</tr>
+					<tr>
+						<td><input type="text" placeholder="abc@somewhere.ca" name="email" th:field="*{email}"></td>
+						<td colspan="2"><select id="genderSelect" th:field="*{gender}">
+								<option th:each="g : *{genders}" th:text="${g}" th:value="${g}">
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2">Select Age Group:<br><select id="ageSelect" th:field="*{ageGroup}">
+								<option th:each="a : *{ages}" th:text="${a}" th:value="${a}">
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2">Select Event Date:<br><select id="dateSelect" th:field="*{eventDate}">
+								<option th:each="d : *{dates}" th:text="${d}" th:value="${d}">
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2">Select Ticket Package:<br><select id="priceSelect" th:field="*{ticketPrice}">
+								<option th:each="p : *{prices}" th:text="${p}" th:value="${p}">
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2">How did you hear about us?<br><select id="surveySelect" th:field="*{survey}">
+								<option th:each="s : *{surveyoptions}" th:text="${s}" th:value="${s}">
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center;"><input type="submit" value="Add Ticket"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</section>
+	<section></section>
+</main>
+
+<hr>
+<footer>
+	<p>COPYRIGHT © CONVERSE WARPED TOUR | 2024</p>
+</footer>
+
+</body>
+</html>

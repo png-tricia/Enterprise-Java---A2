@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Converse Warped Tour | View Tickets</title>
+<link rel="stylesheet" th:href="@{css/main.css}">
+<link rel="stylesheet" th:href="@{css/view.css}">
+</head>
+<body>
+<!-- Converse Warped Tour 2024  -->
+<header>
+	<!-- Links -->
+	<nav>
+		<div class="center">
+			<img th:src="@{../img/png-cwt_logo.png}">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="">Event Info</a></li>
+				<li><a href="">Guest List</a></li>
+				<li><a href="/add">Buy Ticket</a></li>
+				<li><a class="active" href="/view">View Tickets</a></li>
+				<li><a href="/stats">View Statistics</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>	
+<hr>
+<!-- main should be the only thing changing across all html pages  -->
+<main>
+	<section></section>
+	<!-- Layer Two -->
+	<section>
+		<div class="center">
+			<table border="1">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Gender</th>
+					<th>Age Group</th>
+					<th>Event Date</th>
+					<th>Price (CAD)</th>
+					<th>How did you hear about us?</th>
+					<th colspan="2">Options</th>
+				</tr>
+				<tr th:each="t : ${tickets}">
+					<td th:text="${t.id}"></td>
+					<td th:text="${t.name}"></td>
+					<td th:text="${t.phone}"></td>
+					<td th:text="${t.email}"></td>
+					<td th:text="${t.gender}"></td>
+					<td th:text="${t.ageGroup}"></td>
+					<td th:text="${t.eventDate}"></td>
+					<td th:text="${t.ticketPrice}"></td>
+					<td th:text="${t.survey}"></td>
+					<td><a th:href="@{/edit/{id}(id=${t.id})}">Edit</a></td>
+					<td><a th:href="@{/delete/{id}(id=${t.id})}">Delete</a></td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section></section>
+</main>
+
+<hr>
+<footer>
+	<p>COPYRIGHT © CONVERSE WARPED TOUR | 2024</p>
+</footer>
+
+</body>
+</html>

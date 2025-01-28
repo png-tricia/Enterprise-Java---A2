@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Converse Warped Tour | Home</title>
+<link rel="stylesheet" th:href="@{css/main.css}">
+<link rel="stylesheet" th:href="@{css/home.css}">
+</head>
+<body>	
+<!-- Converse Warped Tour 2024  -->
+<header>
+	<!-- Links -->
+	<nav>
+		<div class="center">
+			<img th:src="@{../img/png-cwt_logo.png}">
+			<ul>
+				<li><a class="active" href="/">Home</a></li>
+				<li><a href="">Event Info</a></li>
+				<li><a href="">Guest List</a></li>
+				<li><a href="/add">Buy Ticket</a></li>
+				<li><a href="/view">View Tickets</a></li>
+				<li><a href="/stats">View Statistics</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>	
+<hr>
+<!-- main should be the only thing changing across all html pages  -->
+<main>
+    <!-- Layer One -->
+	<section class="fixedsize"> 
+		<div class="center">
+			<h1>ARTISTS AND BANDS PRESENT: </h1>
+			<div class="row">
+				<div class="column">
+					<img th:src="@{../img/jpeg-patd.jpg}">
+					<img th:src="@{../img/jpeg-simple_plan.jpg}">
+				</div>
+				<div class="column">
+					<img th:src="@{../img/jpeg-aar.jpg}">
+					<img th:src="@{../img/jpeg-hollywood_undead.jpg}">
+				</div>
+				<div class="column">
+					<img th:src="@{../img/jpeg-paramore.jpg}">
+					<img th:src="@{../img/jpeg-mcr.jpg}">
+				</div>
+				<div class="column">
+					<img th:src="@{../img/jpeg-soad.jpg}">
+					<img th:src="@{../img/jpeg-marianas_trench.jpg}">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Layer Two -->
+	<section>
+		<div class="center">
+			<table>
+				<tr><th colspan="5">Event Details</th></tr>
+				<tr>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Performances By</th>
+					<th>Main Activities</th>
+				</tr>
+				<tr>
+					<td>August 9, 2024 - Friday</td>
+					<td>10am - 12pm</td>
+					<td>The New Cities<br>Fall Out Boy<br>We The Kings</td>
+					<td>Hot-Dog Eating Contest</td>
+				</tr>
+				<tr>
+					<td>August 10, 2024 - Saturday</td>
+					<td>9am - 2am</td>
+					<td>Pierce The Veil<br>Falling In Reverse<br>Panic! At The Disco</td>
+					<td>Battle of the Bands<br>(Rock Band/Guitar Hero)</td>
+				</tr>
+				<tr>
+					<td>August 11, 2024 - Sunday</td>
+					<td>10am - 10pm</td>
+					<td>Paramore<br>BOYS LIKE GIRLS<br>All Time Low</td>
+					<td>Water Balloon Fight</td>
+				</tr>
+				<tr><td colspan="5">***** Attend All Weekend For A Price Of $25.99 *****<br><br>For More Information Go To <a href="/add">Buy Ticket</a></td></tr>
+			</table>
+		</div>
+	</section>
+	<!-- Layer Three -->
+	<section>
+		<div class="center">
+			<div class="row">
+				<div class="column2">
+					<div class="profile">
+						<img th:src="@{../img/jpeg-profile1.jpg}">
+						<hr>
+						<p>
+							" The battle of the bands was a rad experience!~ People actually
+							came all dressed up and what not. Some guy actually sang while
+							playing the drums. "<br> - Phoebe Astrallie (left)
+						</p>
+					</div>
+				</div>
+				<div class="column2">
+					<div class="profile">
+						<img th:src="@{../img/jpeg-profile2.jpg}">
+						<hr>
+						<p>
+							" The tour was so much! 10/10 would attend again~ Not only did I
+							get to meet my favourite band but I also made new friends who
+							are into the same bands as I. "<br> - Junnie B. Quinta (right)
+						</p>
+					</div>
+				</div>
+				<div class="column2">
+				<div class="profile">
+					<img th:src="@{../img/jpeg-profile3.jpg}"><hr>
+						<p>
+							" It was cool seeing my favourite bands just chill around and
+							take part in the hot dog eating contest last year! Free food am I right :P "<br> 
+							- Hansel Gretezza (right)
+						</p>
+				</div>
+				</div>
+			</div> <!-- end of row -->
+		</div> <!-- end of center -->
+	</section>
+</main>
+
+<hr>
+<footer>
+	<p>COPYRIGHT © CONVERSE WARPED TOUR | 2024</p>
+</footer>
+
+</body>
+</html>

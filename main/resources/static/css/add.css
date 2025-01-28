@@ -1,0 +1,54 @@
+/* table, tr, th, td {
+	background-color: white;
+	border-collapse: collapse;
+	border: 3px dashed black;
+	color: black;
+	text-align: center;
+	width: 100%;
+}
+
+tr, th, td {
+	margin: 15px;
+	padding: 25px;
+	width: auto;
+} */
+
+/* beautify the table */
+table {
+	border: 5px solid black;
+	text-align: left;
+	width: 100%;
+	padding: 15px;
+}
+
+tr, th, td {
+	padding: 0px 10px;
+	width: 50%;
+}
+
+/* form elements */
+form {
+	background-color: white;
+	border: 5px dashed black;
+	padding: 25px;
+	width: 100%;
+}
+
+input[type=text], input[type=email], input[type=tel], #genderSelect,
+	#ageSelect, #dateSelect, #priceSelect, #surveySelect {
+	font-size: 15px;
+	margin: 10px 0px;
+	padding: 10px 10px;
+	width: 100%;
+}
+
+input[type=text]:focus {
+	box-shadow: 0px 0px 15px #d6bbf3;
+}
+
+input[type=submit] {
+	font-size: 15px;
+	margin: 20px 15px;
+	padding: 10px 25px;
+	width: auto;
+}
