@@ -30,8 +30,8 @@ Create a stats page. This page will display statistical information based on our
 Part 8: Proof of Completion <br> 
 [I am going to omit this part and provide images here instead]
 
-Use of New Material must be discussed with Professor prior to using. <br>
-Use of JavaScript and other languages is prohibited. 
+Use of New Material must be discussed with Professor prior to using.<br>
+Use of JavaScript and other languages is prohibited. Code is expected to be functional using Spring Boot, Thymeleaf, and H2. 
 
 ## The Final Product: 
 ![screencapture-localhost-8080-2025-01-28-15_37_42](https://github.com/user-attachments/assets/ed62d69e-2388-4645-8f4e-70f6c72ff0be)
